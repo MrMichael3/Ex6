@@ -49,11 +49,24 @@ int maxProfit(int price[], int n, int k){
 }
 
 int main(){
-	int price[8] = {12,14,17,10,14,13,12,15};
+	/*int price[8] = {12,14,17,10,14,13,12,15};
 	int n = 8;
 	int k = 3;
 	int profit = maxProfit(price,n,k);
 	//profit = maxProfitLight(price,n);
+	printf("maxProfit: %d\n",profit);
+	*/
+	
+	int price[50];
+	int k;
+	int n=0;
+	printf("How much transactions (k)?\n");
+	scanf("%i",&k);
+	printf("Enter all prices: \n");
+	while(scanf("%d",&price[n])){
+		n++;
+	}
+	int profit = maxProfit(price,n,k);
 	printf("maxProfit: %d\n",profit);
 	return 0;
 }
