@@ -32,12 +32,15 @@ int maxProfitLight(int price[], int n, int k){
 	int isChanged = 0;
 	for(int b=0;b<n-1;b++){
 		for(int s=b+1;s<n;s++){
-			if(price[s]-price[b] + maxPrev(b).val > max){
+			//add if greater than previous max and k limitation isnt reached
+			if(price[s]-price[b] + maxPrev(b).val > max && maxPrev(b).k + 1 <= k){
 				//isChanged = 1;
 				max = price[s]-price[b]+maxPrev(b).val;
 				m[b][s].val = max;
+				//when do I need to increase k
+				printf("kPrev= %d\n",maxPrev(b).k);
 				m[b][s].k = maxPrev(b).k + 1;
-				printf("max: %d in [%d][%d]\n",max,b,s);
+				printf("max: %d,k: %d in [%d][%d]\n",max,m[b][s].k,b,s);
 			}
 		}
 		/*if(isChanged){
