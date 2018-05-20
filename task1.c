@@ -55,18 +55,6 @@ int knapsackDynamic(int capacity, int mass[], int profit[], int n){
 			if(j == 0 || i == 0){
 				m[i][j] = 0;
 			}
-			/*
-			int without = m[i-1][j];
-			//check if item has enough space
-			if(mass[i] <= j){
-				int newCapacity = j - mass[i];
-				int with = profit[i] + m[i-1][newCapacity];
-				//store max value
-				m[i][j] = with;
-			}
-			if(m[i][j] < without){
-				m[i][j] = without;
-			}*/
 			if(mass[i] <=j){
 				int newCapacity = j - mass[i];
 				int with = profit[i] + m[i-1][newCapacity];
@@ -117,10 +105,10 @@ int main(){
 	printf("max profit 2: %d\n",profitRecursive2);
 	
 	//doesn't terminates!
-	/* 
+	
 	int profitRecursive3 = knapsackRecursive(capacity3, mass3, profit3, n3);
 	printf("max profit 3: %d\n",profitRecursive3);
-	*/
+	
 // B) Memoized	
 	printf("Memoized Way:\n");
 	
