@@ -5,25 +5,6 @@
 
 struct vertex{
 	int inhabited;
-<<<<<<< HEAD
-	char color[5];
-	struct vertex *pre;
-};
-struct vertex m[20][20];
-int countEcosystems(){
-	
-	
-	
-	
-	return 0;
-}
-
-
-
-
-
-
-=======
 	int color; // 0: white, 1: grey, 2: black
 };
 
@@ -68,7 +49,6 @@ int countEcosystems(){
 	}
 	return counter;
 }
->>>>>>> testing
 
 
 int main(){
@@ -77,11 +57,7 @@ int main(){
 	m[2][0].inhabited = 1;m[2][1].inhabited = 0;m[2][2].inhabited = 0;m[2][3].inhabited = 1;m[2][4].inhabited = 1;
 	m[3][0].inhabited = 0;m[3][1].inhabited = 0;m[3][2].inhabited = 0;m[3][3].inhabited = 0;m[3][4].inhabited = 0;
 	m[4][0].inhabited = 1;m[4][1].inhabited = 0;m[4][2].inhabited = 1;m[4][3].inhabited = 0;m[4][4].inhabited = 1;
-<<<<<<< HEAD
-	
-=======
 	int c = countEcosystems();
 	printf("# distinct ecosystems: %d\n",c);
->>>>>>> testing
 	return 0;
 }
