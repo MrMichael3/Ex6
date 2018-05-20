@@ -74,9 +74,9 @@ int maxProfit(int price[], int n, int k){
 }*/
 
 int main(){
-	int price[8] = {12,14,17,10,14,13,12,15};
+	int price[8] = {12,14,17,10,14,13,12,19};
 	int n = 8;
-	int k = 3;
+	int k = 1;
 	int profit = maxProfitLight(price,n,k);
 	//profit = maxProfitLight(price,n);
 	printf("maxProfit: %d\n",profit);
